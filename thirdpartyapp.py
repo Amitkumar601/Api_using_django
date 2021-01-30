@@ -19,9 +19,9 @@ def get_data(id = None):
 #this method is created to create data in DB.
 def post_data():
     data={
-        'name':'amit',
-        'roll':142,
-        'city':'kangra'
+        'name':'neeraj',
+        'roll':222,
+        'city':'lay'
         }
 
 
@@ -30,14 +30,14 @@ def post_data():
     data = r.json()
     print(data)
 
-#post_data()     
+post_data()     
 
 #this method use to update data 
 def update_data():
     data={
         'id':8,
         'name':'suraj',
-        'city':'shimla'
+        'city':'kullu'
     }
 
     json_data = json.dumps(data)
@@ -46,7 +46,7 @@ def update_data():
     print(data)
 
 
-update_data()    
+#update_data()    
 
 
 #This method is use to delete data from DB

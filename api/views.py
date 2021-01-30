@@ -29,7 +29,7 @@ def student_api(request):
             json_data = JSONRenderer().render(serializer.data)
             return HttpResponse(json_data, content_type='application/json') 
     
-    if request.method == 'POST':
+    elif request.method == 'POST':
         json_data = request.body
         stream = io.BytesIO(json_data)
         pythondata = JSONParser().parse(stream)   
@@ -43,7 +43,7 @@ def student_api(request):
             json_data = JSONRenderer().render(serializer.errors)
             return HttpResponse(json_data, content_type='application/json')
         
-    if request.method == 'PUT':
+    elif request.method == 'PUT':
         json_data = request.body
         stream = io.BytesIO(json_data)
         pythondata = JSONParser().parse(stream)
@@ -61,7 +61,7 @@ def student_api(request):
             json_data = JSONRenderer().render(serializer.errors)
             return HttpResponse(json_data, content_type='application/json')
 
-    if request.method == 'DELETE':
+    elif request.method == 'DELETE':
         json_data = request.body
         stream = io.BytesIO(json_data)
         pythondata = JSONParser().parse(stream)
